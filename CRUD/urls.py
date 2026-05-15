@@ -3,6 +3,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path, include
 
 from users.views import portal_redirect
+from .views import contato, suporte, politicas
 
 urlpatterns = [
     path(
@@ -29,4 +30,8 @@ urlpatterns = [
     path('disciplinas/', include('disciplinas.urls')),
     path('faltas/', include('faltas.urls')),
     path('notas/', include('notas.urls')),
+
+    path('contato/', contato, name='contato'),
+    path('suporte/', suporte, name='suporte'),
+    path('politicas/', politicas, name='politicas'),
 ]

@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Portal Tech</title>
+
+    <link rel="stylesheet" href="{% static 'css/contato.css' %}">
+</head>
+
+<body>
+
+<section class="contato">
+
+    <h1>Entre em Contato</h1>
+
+    <p class="descricao">
+        Estamos disponíveis para atender dúvidas, sugestões
+        e ajudar você da melhor forma possível.
+    </p>
+
+    <div class="cards-contato">
+
+        <div class="card">
+            <h3>📧 E-mail</h3>
+
+            <p>
+                suporte@portaltech.com
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📞 Telefone</h3>
+
+            <p>
+                (81) 99999-9999
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🕒 Atendimento</h3>
+
+            <p>
+                Segunda a Sexta<br>
+                08h às 18h
+            </p>
+        </div>
+
+    </div>
+
+    <form id="contatoForm">
+
+        <input type="text" placeholder="Seu nome" required>
+
+        <input type="email" placeholder="Seu e-mail" required>
+
+        <textarea
+            placeholder="Digite sua mensagem"
+            rows="6"
+            required>
+        </textarea>
+
+        <button type="submit">
+            Enviar Mensagem
+        </button>
+
+        <p id="mensagemContato">
+            Mensagem enviada com sucesso!
+        </p>
+
+    </form>
+
+</section>
+
+<script>
+    const contatoForm = document.getElementById('contatoForm');
+    const mensagem = document.getElementById('mensagemContato');
+
+    contatoForm.addEventListener('submit', function(event) {
+
+        event.preventDefault();
+
+        mensagem.style.display = 'block';
+
+        contatoForm.reset();
+    });
+</script>
+
+</body>
+</html>
+
+{% endblock %}
