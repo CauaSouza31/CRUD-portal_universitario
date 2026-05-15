@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+}
+
+.suporte {
+    max-width: 1000px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.suporte h1 {
+    text-align: center;
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+
+.descricao {
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.cards-suporte {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    flex: 1;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #2563eb;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #1e3a8a;
+}
+
+.card p {
+    color: #555;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+input,
+select,
+textarea {
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#mensagemSuporte {
+    display: none;
+    color: green;
+    text-align: center;
+    font-weight: bold;
+}

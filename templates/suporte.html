@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte - Portal Tech</title>
+
+    <link rel="stylesheet" href="{% static 'css/suporte.css' %}">
+</head>
+
+<body>
+
+<section class="suporte">
+
+    <h1>Central de Suporte</h1>
+
+    <p class="descricao">
+        Precisa de ajuda? Nossa equipe está disponível para auxiliar você
+        com problemas técnicos, acesso ao sistema e dúvidas acadêmicas.
+    </p>
+
+    <div class="cards-suporte">
+
+        <div class="card">
+            <h3>🔐 Problemas de Login</h3>
+
+            <p>
+                Recuperação de senha, erros de autenticação
+                e dificuldades de acesso.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>📚 Suporte Acadêmico</h3>
+
+            <p>
+                Dúvidas sobre notas, faltas, disciplinas
+                e informações acadêmicas.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💻 Suporte Técnico</h3>
+
+            <p>
+                Relate bugs, falhas no sistema
+                ou problemas de desempenho.
+            </p>
+        </div>
+
+    </div>
+
+    <form id="suporteForm">
+
+        <input type="text" placeholder="Seu nome" required>
+
+        <input type="email" placeholder="Seu e-mail" required>
+
+        <select required>
+            <option value="">Selecione o tipo de suporte</option>
+            <option>Problema de Login</option>
+            <option>Suporte Acadêmico</option>
+            <option>Erro no Sistema</option>
+            <option>Outro</option>
+        </select>
+
+        <textarea
+            placeholder="Descreva seu problema"
+            rows="6"
+            required>
+        </textarea>
+
+        <button type="submit">
+            Solicitar Suporte
+        </button>
+
+        <p id="mensagemSuporte">
+            Solicitação enviada com sucesso!
+        </p>
+
+    </form>
+
+</section>
+
+<script>
+    const suporteForm = document.getElementById('suporteForm');
+    const mensagem = document.getElementById('mensagemSuporte');
+
+    suporteForm.addEventListener('submit', function(event) {
+
+        event.preventDefault();
+
+        mensagem.style.display = 'block';
+
+        suporteForm.reset();
+    });
+</script>
+
+</body>
+</html>
+<p>Central de suporte do portal.</p>
+
+{% endblock %}
